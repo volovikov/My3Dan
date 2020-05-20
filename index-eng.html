@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>The presentation of work for the 3rd Dan Master Level</title>  
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-content>
+          <v-container>
+              <h1 class="display-3 font-weight-light cyan--text">The presentation of work for the 3rd Dan Master Level. </h1>
+              <h2 class="display-1 font-weight-light green--text">Volovikov Vladimir Sergeevich. Russia. St. Petersburg</h2>
+              <div style="margin-top: 2em">
+                <h2 class="title1 font-weight-light pink--text">Introduction</h2>
+                <p>
+  This presentation is an additional material for the 3rd Dan Master Level. In it, in chronological order, the author tells about the events, which were held by him, the purpose of which has always been the popularization of the Traditional Karate.
+                </p>
+              </div>
+              <template>
+                <v-timeline>
+                  <v-timeline-item
+                    v-for="(year, i) in years"
+                    :key="i"
+                    :color="year.color"
+                    small
+                  >
+                    <template v-slot:opposite>
+                      <span
+                        :class="`headline font-weight-bold ${year.color}--text`"
+                        v-text="year.year"
+                      ></span>
+                    </template>
+                    <div class="py-3">
+                      <h2 :class="`headline font-weight-light mb-3 ${year.color}--text`">{{year.title}}</h2>
+                      <div v-html="year.html">
+                      </div>
+                    </div>
+                  </v-timeline-item>
+                </v-timeline>
+                  <h2 class="display-2 font-weight-light green--text" style="margin-top: 2em">The Instructor’s Office а</h2>
+                  <p>
+                      The idea to create a special program for competition organization was first announced by Sensei Gonza A.B. in summer 2013 at the Dojo Stara Veshch in Poland. Throughout the year were created the first drafts of the program. Its interface has changed. Also were added component parts, modules and were corrected errors. At the moment the program consists of several large parts, in which the organization of competitions is a large, but not the only part.
+                    </p>
+                  <h3 class="display-1 font-weight-light cyan--text">Cabinet</h3>
+                  <p>
+                      The first section of the program is called the Cabinet. Here the instructor can upload his photo, as well as specify the city in which he is training. The system will automatically show this place on the map. Here you can also set the name of your club and specify contact details. All these data are necessary for the system to form a single card of the federation members’ presence. Such a card can be placed on the official website of the organization.
+                  </p>
+                  <img src="img/blackbeltroom/1.jpg">
+                  <h3 class="display-1 font-weight-light cyan--text">Diploma</h3>
+                  <p>
+                      At first, it was a small program, that automatically created standard diploma, based on the data, entered into the form. And now it is a part of the instructor's office. With the help of this service all diplomas of all federation clubs will have one general form. Moreover, each diploma is unique. It has a unique number. If to place a form for entering this number on the official website of the federation, then any user can always get comprehensive information about who issued the diploma, which club, which coach and when. This is an excellent quality control system for education.
+                  </p>
+                  <img src="img/blackbeltroom/2.jpg">
+                  <img src="img/blackbeltroom/3.jpg">
+                  <img src="img/blackbeltroom/4.jpg">
+                  <img src="img/blackbeltroom/5.jpg">
+                  <h3 class="display-1 font-weight-light cyan--text">The judge</h3>
+                  <p>
+                      This tab opens ‘The Judge”, the program for organization of competitions. It is very important to understand that this is part of the program. It is available to all trainers of the federation. This is not a separate product, but part of the overall system. In the process of creation of the next competition, the coach simply indicates which clubs will participate in the competition. Further, the program will automatically receive a register of students of this club from the Single Diploma, their age and qualifications. 
+                  </p>
+                  <img src="img/blackbeltroom/6.jpg">
+                  <img src="img/blackbeltroom/7.jpg">
+                  <img src="img/blackbeltroom/8.jpg">
+                  <h3 class="display-1 font-weight-light cyan--text">Forum </h3>
+                  <p>
+                      Any organization needs systems for transfer and storage of the information. In the simplest case, a regular e-mail is such a system. But email addresses are changing. The number of letters constantly grows. It’s difficult to look for information. The forum is part of the Instructor’s Office. Here can be made correspondence. Here it’s possible to store information, such as certification program or some kind of general promotional materials. And also, the Forum will automatically send all information to the Federation Coaches. After all, all the email addresses are known to him.
+                  </p>
+                  <img src="img/blackbeltroom/9.jpg">
+              </template>
+          </v-container>
+      </v-content>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+  <script>
+    new Vue({
+        el: '#app' ,
+        data: function() {
+            return {
+                years: [
+                    {
+                      color: 'cyan',
+                      year: '2016',
+                      title: 'Reebok. Become a Human',
+                      html: `<p>
+                              In summer 2016, I organized the presentation of the Traditional Karate as part of the event “Reebok Become a Human”. The participants of the event are young people of 20-30 years old. They are active and doing sports, including professional level. The total number of participants in this event is more than 3000 people.
+                             </p>
+                             <p>
+                             Especially for this event, I’ve developed a small presentation in the form of an open training seminar. For one hour long I was telling to all the volunteers about the basic principles of the traditional karate, explaining my thoughts with vigorous actions and examples.
+                             </p>
+                             <img src="img/reebok/1.jpg">   
+                             <img src="img/reebok/2.jpg">   
+                             <img src="img/reebok/3.jpg">   
+                            `
+                    },
+                    {
+                      color: 'cyan',
+                      year: '2016',
+                      title: 'The Budo Academy in Saint-Petersburg',
+                      html: `<p>
+                              The Budo Academy is a blitz workshop, approximately 15-20 minutes for each, held by the leading masters of various martial arts on the same topic. The project itself is over 5 years old. The events are held once in every three months. In 2016, this event was first held in St. Petersburg, and I was the organizer of this event.
+                            </p>
+                            <p>
+                            In order to make this even more interesting, I asked the teachers to write short essays about the creating of this project and its development. These information was presented in the form of the separate articles and published on the pages of the Internet portal http://karate.ru, which acted as the official information partner of the event, as well as in social networks in thematic groups. The total audience was more than 40,000 people. This event had a great response. It raised an interest of St. Petersburg sports officials, the Heads of the Russian Union of Martial Arts. 
+                            </p>
+                            <img src="img/budoacademy/1.png">
+                            <img src="img/budoacademy/2.png">
+                            <p>
+                            The Teachers of the Academy
+                            <ul>
+                                <li>Grachev Alexander (the 4th Dan Ju-Jutsu)</li>
+                                <li>Sizov Sergey. (the 7th Dan Shotokan IJKA)</li>
+                                <li>Igor Sadovnikov (the 6th Dan Shotokan Case-ha)</li>
+                                <li>Garmaev Veniamin (the 6th Dan Sito-ryu)</li> 
+                                <li>Klyuev Denis (the 3rd Dan Sito-ryu)</li> 
+                                <li>Kulbansky Evgeny (the 6th Dan Fudokan)</li> 
+                                <li>Galitsyn Yevgeny Borisovich - the first black belt in karate in Leningrad </li>
+                            </ul>
+                            </p>`
+                    },
+                    {
+                      color: 'cyan',
+                      year: '2016',
+                      title: 'Festival of Traditional Karate in St. Petersburg',
+                      html: `<p>
+                              Festival is a holiday. This is a good opportunity to show people what is Traditional Karate. The Festival of Traditional Karate in St. Petersburg is exactly such an event. Its main task is to popularize traditional karate.
+                            </p>
+                            <p>
+                            How many people do attend the competition? Not so many. And mostly it's either relatives or parents. And how many people sit at home on the social networks and watch everything on their computer? Really a lot. The focus of this event is on them. So. Hall. Tatami. Professional studio lighting equipment. Photographer. Videographer. On the tatami are the best athletes from different federations. The main question for everybody is “What is Traditional Karate”?
+                            </p>
+                            <p>
+                            I also want to point out, that this event had not only information partners, but also the general sponsor, the telecommunications company Miatel. The main prize of the competition is a custom-made cup
+                            </p>                                
+                            <img src="img/festivaltk/2.png">
+                            <p>
+                            In this photo: Sadovnikov I.R. (the 7th Dan Shotokan Case-ha), Sizov S.V. (the 7th Dan Shotokan JSKA), Molchanov I.I. (the 4th Dan ISKF) and General Director of Myatel, Krenichny A.B. 
+                            </p>
+                            <img src="img/festivaltk/11.png">    
+                            <p>
+                            Sensei Sadovnikov I.R. (the 6th Dan Shotokan Kaze-ha). Photo before the interview
+                            </p>
+                            <video width="520" controls="controls" >
+                                <source src="video/kulbansky.mp4">                            
+                            </video>
+                            <p>
+                            The direct result of this event is the unique positioning of video clips in searching results. If you type the phrase “what is traditional karate” in Yandex, you will be shown video clips from this event. 
+                            </p>
+                            <img src="img/festivaltk/3.png">
+                            `
+                    },
+                    {
+                      color: 'green',
+                      year: '2017',
+                      title: 'Budo Academy, The Apple Orchard ',
+                      html: `<p>
+                            For a year I had an idea to make this event more interesting. And I thought, why not to make it outside. Let's say in the orchard? In an apple orchard? And if so, then the video from the seminar can be mixed with, for example, quadcopter video. It is rather fashionable and interesting! 
+                            </p>
+                            <img src="img/budoacademy2/1.jpg">
+                            <img src="img/budoacademy2/3.jpg">
+                            <img src="img/budoacademy2/7.jpg">
+                            <p>
+                            It’s very important to get high-quality video material. I really wanted that the video would be interesting to watch also from an artistic point of view. For a few months I was looking for a videographer with the qualification, which I needed. In the photo below is Denis, who carried out this task perfectly. 
+                            </p>
+                            <img src="img/budoacademy2/8.jpg">
+                            <p>
+                            And of course, St. Petersburg in spring is a completely different city. It’s a time of navigation start. It can be seen form the board of a small tourist yacht, and that’s exactly what we did.
+                            </p>
+                            <img src="img/budoacademy2/2.jpg">
+                            <p>
+                            Now can be evaluated the result of this work. BudoAcademy in St. Petersburg in the Apple Orchard was the most popular event in 2017. There were more than 10 mentors, and more than 40 participants (masters). As a result, there are tens of thousands of video and photo views. 
+                            </p>
+                            <video width="520" controls="controls" >
+                                <source src="video/budoacademy.mp4">                            
+                            </video>
+                            `
+                    },
+                    {
+                      color: 'green',
+                      year: '2017',
+                      title: 'The opening of Dojo. The Center of Traditional Karate in St. Petersburg',
+                      html: `<p>
+                            The same year I’ve opened my hall - Dojo. From start it was just an ordinary basement. Just walls. Concrete and brick. And now it is the Center of Traditional Karate in St. Petersburg. The process of repair took more than three months without a break. The floor is a special sports linoleum. It’s not slippery. There are spacious changing rooms in which there is additional ventilation and shower cabins. My special pride is a special forced industrial ventilation. Huge pipes of 250 mm and industrial fan, filter and heater. Everything in order to exercise in comfort in winter and summer. And also there is lighting. Special LED lamps give a lot of light. And of course, what kind of karate can be without Makiwara? We made them ourselves. Now we have 8 of them. There are the simplest for students with a blue and brown belt, made of ash. There are also variants for masters, stitched in a special way, which have a stiffer oak pebble. And there are two special makiwaras, originally from the Soviet Union.
+                            </p>
+                            <img src="img/dojo/1.jpg">
+                            <img src="img/dojo/2.jpg">
+                            <img src="img/dojo/6.png">
+                            <img src="img/dojo/7.png">
+                            <img src="img/dojo/9.jpg">
+                            <img src="img/dojo/11.jpg">
+                            `
+                    },                    
+                    {
+                      color: 'orange',
+                      title: 'The Seminar of Sensei Kulbansky',
+                      year: '2018',
+                      html: `
+                            <p>
+                            The first seminar, that I organized in my center, was a seminar of Sensei Kulbansky E.M. (the 6th Dan Fudokan), the student of Sensei Ilya Yorgi (the 10th Dan). Sensei is a great specialist not only in the field of karate, but also in the field of medicine. Sensei seminars are always very informative. The karate club is turning into a center. Dojo is attended by students from other clubs, federations and other karate styles. The main topic of seminar: “What is the Traditional Karate”?
+                            </p>
+                            <img src="img/kulbansky/1.png">
+                            <img src="img/kulbansky/2.png">
+                      `
+                    },
+                    {
+                      color: 'orange',
+                      title: 'The Seminar of Sensei Albert Boutbol (the 8th Dan Kaze-ha)',
+                      year: '2018',
+                      html: `
+                            <p>
+                            In the same year I was lucky to meet Albert Boutbol (the 8th Dan Shotokan), the head of the Case-ha Federation. Albert was talking a lot about Sensei Case-ha and about his contribution to the development of karate Shotokan. About the peculiarities of style. We traveled and photographed a lot. . 
+                            </p>
+                            <img src="img/boutbol/2.jpg">
+                            <img src="img/boutbol/3.jpg">
+                            <p>
+                            The main topic of the seminar was Kata Chinte. Sensei told me about it. He also showed the features of the Kaze-ha style.
+                            </p>
+                            <img src="img/boutbol/1.jpg">
+                            <img src="img/boutbol/4.jpg">
+                            `
+                    },   
+                    {
+                      color: 'orange',
+                      title: 'The First Open Childrens Festival of Traditional Karate “Peter is calling”',
+                      year: '2018',
+                      html: `
+                            <p>
+                            This time the first roles were given to kids. And if preciously the event was created for 10-15 people, then with “Peter is calling”, I already counted on hundreds of participants. In general, the idea is similar: several federations, several dozens of the best kids-athletes, from each organization, and many demonstration performances.
+                            </p>
+                            <p>
+                            When I started work over this event, I perfectly understood that the Fudokan competition rules or the rules of the United Traditional Karate Federation competitions are not fully appropriate. It was necessary to make something more universal, suitable for everyone. I asked Sensei Kulbansky E.M. (the 6th Dan) to help me in development of such rules. As a result, we shot a video with detailed explanations for trainers. And it was very useful for work.
+                            </p>
+                            <p>
+                            No matter how experienced a photographer or video operator is, if actions take place in a poorly equipped hall with very poor lighting, it will be impossible to get a good and high-quality photo and video. A regular gym is not suitable for event organization. The search of hall took me more than 6 months. NovaArena is one of the most modern sports centers in St. Petersburg. The hall has excellent lighting and bright design. That’s exactly what you need for festival organization!
+                            </p>
+                            <img src="img/pitercall/1.jpg">
+                            <img src="img/pitercall/2.png">
+                            <p>
+                            The synonym for word “good hall” is usually “expensive hall”. The rental price of this one is certainly much higher than the total amount of the entrance fees, collected from the participants'. We needed sponsors, and sponsors needed bright events, new, eye-catching, not ordinary.
+                            </p>
+                            <video width="520" controls="controls" >
+                                <source src="video/trailer.mp4">                            
+                            </video>
+                            <p>
+                            Nikita Zhamkov is a multiple winner of all-around Fudokan Karate competitions. He is a multiple champion of Russia, Europe and the World. He is very, very talented boy. I invited him to my dojo and made a promotional video with his participation. This video tells about all the achievements of Nikita and all the difficulties that he faced on his way. In the end of the video Nikita asks the audience: “What have you achieved?” Nikita provokes to have a fight with him. And it worked! In less than a month, tens of thousands of people watched this video. I began to receive bids. Boys from all cities of our country, inspired by his example, hurried to send their application. They wanted to face off with Nikita.
+                            </p>
+                            <p>
+                            The raise of interest brought a sponsor. The sponsor of this event became a well-known Russian company, producing ammunition for martial arts, Ray-Sport. Part of the funds that I received from them under the sponsorship agreement, I spent on the hall rent, the other part went to the organization of an advertising company. Also there were special prizes, such as special branded bags, paws, a makiwara and even a big champion belt. Moreover, the small Ukrainian factory for the production of kimono, Empire, also decided to take part as a partner of the event, and give the children some of their karate gi. It was awesome!
+                            </p>                            
+                            <img src="img/pitercall/6.jpg">
+                            <img src="img/pitercall/10.jpg">
+                            <p>
+                            I would also like to specify the festival's advertising campaign. Especially for this event I made a separate website, http://piter-zovet.ru/, where I  posted all the detailed information. Additionally, I regularly sent emails to the email addresses of the masters, informing them about the progress of festival preparation. There was information about the prizes will be about, rules, etc. And I did it not in the usual way. These are not documents, but real mini-sites, letters with graphics, videos, etc. In addition, I wrote a number of articles and announcements about the festival which with pleasure were posted by the information partners of the event: the portal budokarate.ru and karate.ru with a total audience reach of over 50,000 people
+                            </p>
+                            <img src="img/pitercall/11.png">
+                            <p>
+                            And also, at this event for the first time was used the program for competitions organizing “The Instructor’s Office”, in the development of which, as a consultant, took part Alexander Gonta (5 Dan WTKF). And unlike the SportData program, for its use there is no need in additional technical tools. Laptop, monitor and that’s all. For “Peter is Calling”, I rented regular plasma screens. The program is very easy in use and can be used for any competition of any level.
+                            </p>
+                            <img src="img/pitercall/5.jpg">                                                        
+                            <p>
+                            On the picture can be clearly seen a large plasma screen with ratings. Susin - Vladimir Sukhovey (the 5th Dan Fudokan) 
+                            </p>
+                            <img src="img/pitercall/8.png">                                                        
+                            <p>
+                            This is a screen shot of the result of the program. Gere can be seen the draw and move of participants on the grid 
+                            </p>
+                            <video width="520" controls="controls" >
+                                <source src="video/pitercall.mp4">                            
+                            </video>
+                            `
+                    },
+                    {
+                      color: 'pink',
+                      title: 'The Seminar of Sensei Kulbansky (6th Dan Fudokan)',
+                      year: '2019',
+                      html: `
+                            <p>
+                            The beginning of the academic year 2019 started with the seminar of Sensei Kulbansky (the 6th Dan Fudokan). This time the topic of the seminar was “The pain points in the martial arts”. As always, everything was detailed and informative. And surprisingly for me, this seminar was also visited by clubs, which practice only sports karate WKF. It was very interesting to see, how they discover other, traditional karate. 
+                            </p>
+                            <img src="img/kulbansky2/1.jpg">
+                            <p>
+                            A few years ago, Sensei Kulbansky wrote a book on the topic of pain points in the martial arts. He brought several manuals written on its basis, which he presented to us.
+                            </p>
+                            <img src="img/kulbansky2/2.jpg">
+                            <img src="img/kulbansky2/3.jpg">
+                      `
+                    },
+                    {
+                      color: 'pink',
+                      title: 'The Seminar of Sensei Grachev (4th Dan Ju-Jutsu)',
+                      year: '2019',
+                      html: `
+                            <p>
+                            Ju-Jutsu is the common name for Japan’s hand-to-hand combat systems. And all these schools were complex. First of all, they included various methods of work with weapons. Unarmed combat is a small part, just one small section of their program. Ju-jutsu and karate, or rather kempo, are two directions, that were one whole in the old days. In both there are punches, kicks, throws, creases and suffocations. In the process of organization, the seminar for Sensei, I really wanted to show both my students and all the rest, what is Ju-Jutsu in reality. After all, the better we understand the origins of martial arts, the better we understand traditional karate.
+                            </p>
+                            <img src="img/grachev/1.jpg">
+                            <img src="img/grachev/2.jpg">
+                            <img src="img/grachev/3.jpg">
+                      `
+                    } 
+                  ]
+            }
+        }
+    })
+  </script>
+</body>
+</html>
